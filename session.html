@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guion Teatral - Sesión de Aprendizaje</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      /* --- ESTILOS GENERALES Y PARA PANTALLA --- */
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.1;
+        background-color: #f4f4f4;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 850px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px 20px;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #000;
+        margin: 0;
+      }
+
+      /* Estilo para el título principal "Guion Teatral" */
+      .main-title-container {
+        background-color: #f2f2f2;
+        /* padding: 10px; */
+        border: 1px solid #333;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .main-title-container strong {
+        font-size: 1.5em;
+      }
+
+      /* Estilo para los encabezados de sección (DATOS INFORMATIVOS, etc.) */
+      .section-header {
+        background-color: #f2f2f2;
+        padding: 8px 10px;
+        border: 1px solid #333;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: 1.2em;
+        text-align: center;
+      }
+
+      /* Contenido que va debajo de un section-header */
+      .section-content {
+        border: 1px solid #333;
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+
+      .info-section p {
+        margin: 5px 0;
+        display: grid;
+        grid-template-columns: 180px 1fr; /* Columna para la etiqueta y otra para el valor */
+      }
+
+      .info-section strong {
+        font-weight: normal;
+      }
+
+      .info-section span {
+        font-weight: bold;
+      }
+
+      ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+
+      li {
+        margin-bottom: 5px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0;
+      }
+
+      th,
+      td {
+        border: 1px solid #333;
+        padding: 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .session-moment {
+        border: 1px solid #333;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+
+      .moment-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #333;
+        padding-bottom: 8px;
+      }
+
+      .moment-header h3 {
+        font-size: 1.1em;
+        background-color: #f2f2f2;
+        padding: 5px 10px;
+        border: 1px solid #333;
+      }
+
+      .moment-header span {
+        font-style: italic;
+        color: #333;
+        font-weight: normal;
+      }
+
+      .moment-content p {
+        margin: 10px 0;
+      }
+
+      .task-home {
+        background-color: #f9f9f9;
+        border: 1px solid #333;
+        padding: 15px;
+        margin-top: 10px;
+      }
+
+      .task-home strong {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .signatures {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 80px;
+      }
+
+      .signature-box {
+        text-align: center;
+        width: 40%;
+      }
+
+      .signature-box .line {
+        border-top: 1px solid #333;
+        margin-bottom: 8px;
+        margin-top: 40px;
+      }
+
+      /* --- ESTILOS PARA IMPRESIÓN --- */
+      @media print {
+        body {
+          background-color: #fff;
+          font-size: 10pt;
+          padding: 0;
+          margin: 0;
+        }
+
+        .container {
+          box-shadow: none;
+          border: none;
+          padding: 0;
+          max-width: 100%;
+        }
+
+        .main-title-container,
+        .section-header,
+        th,
+        .moment-header h3 {
+          background-color: #f2f2f2 !important;
+          color: #000 !important;
+          -webkit-print-color-adjust: exact;
+          color-adjust: exact;
+        }
+
+        .main-title-container,
+        .section-header,
+        .section-content,
+        table,
+        th,
+        td,
+        .session-moment {
+          border-color: #333 !important;
+        }
+
+        h2,
+        h3 {
+          color: black !important;
+        }
+
+        table,
+        .session-moment {
+          page-break-inside: avoid;
+        }
+
+        .task-home {
+          background-color: #f9f9f9 !important;
+          border: 1px dashed #333;
+        }
+
+        .signatures {
+          page-break-before: auto;
+        }
+
+        /* Ocultar elementos que no se deben imprimir */
+        .no-print {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Contenedor principal de la sesión -->
+    <div class="container">
+      <div class="main-title-container">
+        <strong>Título: Guion Teatral</strong>
+      </div>
+
+      <!-- SECCIÓN: DATOS INFORMATIVOS -->
+      <div class="section-header">DATOS INFORMATIVOS</div>
+      <div class="section-content info-section">
+        <p><strong>Institución Educativa:</strong> <span>I.E.P. Linus Torvalds</span></p>
+        <p><strong>Grado y sección:</strong> <span>4to A</span></p>
+        <p><strong>Área / Curso:</strong> <span>Comunicación</span></p>
+        <p><strong>Duración:</strong> <span>1 hora pedagógica</span></p>
+        <p><strong>Nivel:</strong> <span>Primaria</span></p>
+        <p><strong>Docente:</strong> <span>Terry Joel Casani Valencia</span></p>
+        <p><strong>Fecha:</strong> <span>10/09/2024</span></p>
+      </div>
+
+      <!-- SECCIÓN: PROPÓSITOS Y EVIDENCIAS DE APRENDIZAJE -->
+      <div class="section-header">
+        1. PROPÓSITOS Y EVIDENCIAS DE APRENDIZAJE
+      </div>
+      <!-- <div class="section-content"> -->
+        <table>
+          <thead>
+            <tr>
+              <th>COMPETENCIAS / CAPACIDADES</th>
+              <th>DESEMPEÑOS</th>
+              <th>¿QUÉ NOS DARÁ EVIDENCIAS DE APRENDIZAJE?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Escribe diversos tipos de textos en su lengua materna.</td>
+              <td>
+                <ul>
+                  <li>
+                    Identifica las características de un guion teatral
+                    (estructura, personajes, diálogos, acotaciones).
+                  </li>
+                  <li>
+                    Organiza sus ideas en un texto con coherencia y cohesión
+                    para elaborar un guion teatral corto.
+                  </li>
+                  <li>
+                    Utiliza el lenguaje para expresar emociones y pensamientos a
+                    través de los personajes en el guion.
+                  </li>
+                </ul>
+              </td>
+              <td>
+                Guion teatral breve realizado por el estudiante. Participación
+                activa en la lectura y análisis de guiones teatrales en clase.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+
+      <!-- SECCIÓN: ENFOQUES TRANSVERSALES -->
+      
+        <table>
+          <thead>
+            <tr>
+              <th>ENFOQUES TRANSVERSALES</th>
+              <th>ACTITUDES O ACCIONES OBSERVABLES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <strong>Enfoque de igualdad de género:</strong> Promover la
+                participación equitativa de niños y niñas en las actividades
+                teatrales. <br /><br />
+                <strong>Enfoque de desarrollo personal:</strong> Fomentar la
+                expresión de emociones y la empatía a través de la escritura
+                creativa.
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    Respeto hacia las ideas de los compañeros al compartir y
+                    leer los guiones.
+                  </li>
+                  <li>
+                    Participación activa y entusiasta en la creación de
+                    personajes y diálogos.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      <!-- </div> -->
+
+      <!-- SECCIÓN: PREPARACIÓN DE LA SESIÓN -->
+      <div class="section-header">2. PREPARACIÓN DE LA SESIÓN</div>
+      <!-- <div class="section-content"> -->
+        <table>
+          <thead>
+            <tr>
+              <th>¿Qué necesitamos antes de la sesión?</th>
+              <th>¿Qué recursos o materiales se utilizarán en esta sesión?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <ul>
+                  <li>
+                    Revisar las rutas de aprendizaje, cuadernos de trabajo y
+                    libro de Comunicación.
+                  </li>
+                  <li>
+                    Elegir y seleccionar los materiales adecuados a la sesión a
+                    trabajar.
+                  </li>
+                  <li>Preparar la ficha de aplicación.</li>
+                </ul>
+              </td>
+              <td>
+                Hojas de papel bond.<br />
+                Lápices y borradores.<br />
+                Cuaderno de comunicación.<br />
+                Textos de ejemplos de guiones teatrales breves.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      <!-- </div> -->
+
+      <!-- SECCIÓN: MOMENTOS DE LA SESIÓN -->
+      <div class="section-header">3. MOMENTOS DE LA SESIÓN</div>
+
+      <!-- Momento: INICIO -->
+      <div class="session-moment">
+        <div class="moment-header">
+          <h3>INICIO</h3>
+          <span>Tiempo aproximado: 5 minutos</span>
+        </div>
+        <div class="moment-content">
+          <ul>
+            <li>Saludo y bienvenida a los estudiantes.</li>
+            <li>
+              Pregunta motivadora: ¿Qué personajes te gustaría crear si hicieras
+              una obra de teatro?
+            </li>
+            <li>Presentación del tema: "Guion Teatral".</li>
+            <li>
+              Lectura en voz alta de un guion teatral breve (elegido por el
+              docente).
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Momento: DESARROLLO -->
+      <div class="session-moment">
+        <div class="moment-header">
+          <h3>DESARROLLO</h3>
+          <span>Tiempo aproximado: 35 minutos</span>
+        </div>
+        <div class="moment-content">
+          <ul>
+            <li>
+              <strong>Explicación de las partes del guion teatral:</strong>
+              personajes, diálogos, acotaciones, estructura (inicio, nudo,
+              desenlace).
+            </li>
+            <li>
+              <strong
+                >Realización de un análisis conjunto del guion leído,</strong
+              >
+              destacando las partes mencionadas.
+            </li>
+            <li>
+              <strong>Actividad práctica:</strong> Dividir a los estudiantes en
+              grupos pequeños y pedirles que creen una idea básica para su
+              propia obra de teatro.
+            </li>
+            <li>
+              <strong>Escritura guiada:</strong> Cada grupo comenzará a escribir
+              un guion teatral corto, siguiendo las indicaciones dadas y usando
+              las partes del guion.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Momento: CIERRE -->
+      <div class="session-moment">
+        <div class="moment-header">
+          <h3>CIERRE</h3>
+          <span>Tiempo aproximado: 5 minutos</span>
+        </div>
+        <div class="moment-content">
+          <ul>
+            <li>
+              Los grupos compartirán con la clase el avance de sus guiones.
+            </li>
+            <li>
+              Retroalimentación del docente y los compañeros de forma respetuosa
+              y constructiva.
+            </li>
+            <li>
+              Reflexión final: ¿Qué fue lo que más disfrutaste al escribir un
+              guion? ¿Qué emociones expresaste en los diálogos?
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Tarea para la casa -->
+      <div class="task-home">
+        <strong>TAREA PARA LA CASA:</strong>
+        <p>
+          Terminar el guion teatral corto en casa, integrando las sugerencias
+          recibidas en clase. Traer el guion completo la siguiente clase para
+          compartirlo y representarlo.
+        </p>
+      </div>
+
+      <!-- SECCIÓN: REFLEXIONES SOBRE EL APRENDIZAJE -->
+      <div class="section-header">
+        4. REFLEXIONES SOBRE EL APRENDIZAJE
+      </div>
+      <div class="section-content">
+        <p>
+          Recuerda las actividades que has realizado y las respuestas que has
+          obtenido de los estudiantes según los desempeños que estaban previstos
+          desarrollar.
+        </p>
+        <ul>
+          <li>¿Qué avances tuvieron mis estudiantes?</li>
+          <li>¿Qué dificultades tuvieron mis estudiantes?</li>
+          <li>¿Qué aprendizajes debo reforzar en la siguiente sesión?</li>
+          <li>
+            ¿Qué actividades, estrategias y materiales funcionaron y cuáles no?
+          </li>
+        </ul>
+      </div>
+
+      <!-- SECCIÓN: FIRMAS -->
+      <footer class="signatures">
+        <div class="signature-box">
+          <div class="line"></div>
+          <p>PROFESOR/A</p>
+        </div>
+        <div class="signature-box">
+          <div class="line"></div>
+          <p>V°B° DIRECCIÓN</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
