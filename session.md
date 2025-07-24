@@ -10,7 +10,6 @@
 - **Docente:** Terry Joel Casani Valencia
 - **Fecha:** 10/09/2024
 
----
 
 ## 1. PROPÓSITOS Y EVIDENCIAS DE APRENDIZAJE
 
@@ -24,7 +23,6 @@
 | :--- | :--- |
 | **Enfoque de igualdad de género:** Promover la participación equitativa de niños y niñas en las actividades teatrales. <br><br> **Enfoque de desarrollo personal:** Fomentar la expresión de emociones y la empatía a través de la escritura creativa. | - Respeto hacia las ideas de los compañeros al compartir y leer los guiones.<br>- Participación activa y entusiasta en la creación de personajes y diálogos. |
 
----
 
 ## 2. PREPARACIÓN DE LA SESIÓN
 
@@ -32,7 +30,7 @@
 | :--- | :--- |
 | - Revisar las rutas de aprendizaje, cuadernos de trabajo y libro de Comunicación.<br>- Elegir y seleccionar los materiales adecuados a la sesión a trabajar.<br>- Preparar la ficha de aplicación. | Hojas de papel bond.<br>Lápices y borradores.<br>Cuaderno de comunicación.<br>Textos de ejemplos de guiones teatrales breves. |
 
----
+
 
 ## 3. MOMENTOS DE LA SESIÓN
 
@@ -62,7 +60,6 @@
 > **TAREA PARA LA CASA:**
 > Terminar el guion teatral corto en casa, integrando las sugerencias recibidas en clase. Traer el guion completo la siguiente clase para compartirlo y representarlo.
 
----
 
 ## 4. REFLEXIONES SOBRE EL APRENDIZAJE
 
