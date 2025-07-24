@@ -119,17 +119,12 @@ const initialMarkdown = `# Título de la Sesión
 ### INICIO
 *Tiempo aproximado: 5 minutos*
 
-- Saludo y bienvenida a los estudiantes.
 - Presentación del tema de la sesión.
-- Activación de conocimientos previos: Pregunta a los estudiantes sobre lo que saben del tema.
 
 ### DESARROLLO
 *Tiempo aproximado: 35 minutos*
 
-- **Actividad 1:** [Descripción de la actividad]
-  - Objetivo: [Objetivo de la actividad]
-  - Materiales: [Materiales necesarios]
-  - Procedimiento: [Pasos a seguir]
+- Desarrollo del contenido de la sesión.
 
 ### CIERRE
 *Tiempo aproximado: 5 minutos*
@@ -174,7 +169,7 @@ export default function Main() {
       </footer>`
     );
 
-    // Replace <FIRMAS> tag first
+    // Replace <FIRMAS> tag
     processedText = processedText.replace(
       /<FIRMAS>/g,
       `<footer class="signatures">
